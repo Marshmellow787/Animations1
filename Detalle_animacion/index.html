@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
+
+    <link rel="icon" href="img/flowers.png" type="image/x-icon">
+    <title>Flowers</title>
+</head>
+
+<body>
+    <div class="greetings">
+        <span>H</span>
+        <span>E</span>
+        <span>l</span>
+        <span>l</span>
+        <span>O</span>
+        <span>W</span>
+        <span>I</span>
+        <span>!</span>
+    </div>
+    <div class="description">
+        <span>Hello, sabes ya pronto sera 14 de febrero y seria un placer y sde lo mejor...</span>
+    </div>
+
+    <div class="card">
+        <div class="heart">❤</div>
+        <h1 id="question">C, ¿Quieres ser mi San Valentín?</h1>
+        <button class="#btn yes" onclick="yesClick()"> <a href="flower.html"  style="color: #fff;">¡Si!</a></button>
+        <button class="btn no" onclick="noClick()">No</button>
+    </div>
+    <script>
+        let mensajes = [
+            "¿Segura?",
+            "Gatito mimiendo pregunta si tas segura?",
+            "Mmmm piensalo mejor",
+            "Y si el no es si",
+            "Mmm rick me dijo que si querias"
+        ];
+        let index = 0;
+
+        function noClick() {
+            let pregunta = document.getElementById("question");
+            pregunta.textContent = mensajes[index];
+            index = (index + 1) % mensajes.length;
+        }
+
+        /*function yesClick() {
+            alert("¡Sabía que dirías que sí!");
+        }
+            */
+    </script>
+
+</body>
+
+</html>
